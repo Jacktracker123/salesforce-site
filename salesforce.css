@@ -142,7 +142,7 @@ nav .right-nav ol .login a span {
 }
 
 .banner .right-banner img {
-    /* width: 50%; */
+    /* width: 100%; */
     /* margin-left: 170px;
     margin-top: 60px; */
 }
@@ -183,22 +183,6 @@ nav .right-nav ol .login a span {
     font-size: 16px;
 }
 
-.banner-container {
-    display: flex;
-    width: 100%;
-    background: url(images/php-marqee-ai-data-crm-lg-bg.webp) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.banner-container .banner {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    /* background-color: wheat; */
-    margin-top: 50px;
-}
 
 .banner .contents h1 {
     font-size: 56px;
@@ -214,109 +198,94 @@ nav .right-nav ol .login a span {
     margin-top: 25px;
 }
 
-.btn-banner {
-    margin-top: 60px;
-}
-
 .btn-banner .btn2 {
-    margin-left: 20px;
+   
     background: transparent;
     border: 2px solid #0176d3;
     color: #0176d3;
+
+}
+.banner-container{
+   background:url(images/php-marqee-ai-data-crm-lg-bg.webp)no-repeat;
+   width: 100%;
+   background-size: cover;
+
+
+}
+.banner-container .banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+width: 1280px;
+height: 510px;
+margin: auto;
+padding-top: 64px;
+column-gap: 40px;
+row-gap: 60px;
+
+
 }
 
-.contents {
+.banner .contents{
+    grid-column-start: 1;
+    grid-column-end: 4;
     width: 620px;
+    height: 510px;
 }
 
-.products-section {
+.products-section{
     width: 100%;
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    background: url(images/pb-hp-products-bg.webp);
-    background-size: cover;
-    background-position: center;
+    height: 2008px;
+    margin-top: 30px;
+    background: url(images/pb-hp-products-bg.webp) no-repeat;
+    /* background-size: cover; */
+    /* background-position: center; */
 }
-
-.products {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.products-section .products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 1300px;
+    height: 703px;
+    margin: auto;
+    padding-top: 80px;
+    row-gap: 200px;
 }
-
-.products .heading {
-    width: 1000px;
-    height: 106px;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.products .heading{
+  
+    grid-column-start: 1;
+    grid-column-end: 7;
+    font-size: 40px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #032D60;
-    font-size: 30px;
+    text-align: center;
 }
 
-.box1 ol {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 290px;
-    height: 427px;
+.product-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1500px;
+    height: 428px;
+    gap: 60px;
+
+}
+.products .product-items .box1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+  
+.product-items ol{
     list-style: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+
+
 }
 
-.box2 ol {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 290px;
-    height: 427px;
-    list-style: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: white;
+.view-all{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 7;
 }
 
-.box3 ol {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 290px;
-    height: 427px;
-    list-style: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: white;
-}
-
-.box4 ol {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 290px;
-    height: 427px;
-    list-style: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: white;
-}
-
-.product-items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-    margin-top: 30px;
-}
-
-a[target="_blank"] {
+a[ target="_blank"]{
     font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #032D60;
@@ -324,39 +293,38 @@ a[target="_blank"] {
     text-decoration: none;
 }
 
-.demo a {
+.box-p{
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #032D60;
-    font-weight: bolder;
-}
-
-.box-p {
-    font: 16px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #181818;
-    padding-top: 10px;
-}
-
-.mid {
-    text-align: center;
-}
-
-.view-all {
-    width: 840px;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.view-all button {
-    padding: 10px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #0176d3;
-    border: 2px solid #0176d3;
-    background: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
+}
+.demo a{
+    font-size: 16px;
+    color: #032D60;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+}
+.mid{
+    padding-top: 80px;
+    padding-left: 30px;
+}
+.demo{
+    padding-top: 80px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+
+}
+
+.view-all button{
+padding: 20px 40px;
+background-color: white;
+color: #0176d3;
+font-size: 20px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bolder;
+border: 2px solid #0176d3;
+}
+.view-all{
+    text-align: center;
 }
