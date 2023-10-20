@@ -14,6 +14,10 @@ body {
     overflow-x: hidden;
 }
 
+.left-nav.navicon {
+    display: none;
+}
+
 header {
     width: 100%;
     display: flex;
@@ -115,6 +119,8 @@ nav .right-nav ol .login a span {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    /* flex-direction: column; */
 }
 
 .dreamforce ol {
@@ -183,7 +189,6 @@ nav .right-nav ol .login a span {
     font-size: 16px;
 }
 
-
 .banner .contents h1 {
     font-size: 56px;
     color: #032D60;
@@ -195,136 +200,232 @@ nav .right-nav ol .login a span {
     font-size: 21px;
     color: #181818;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: 25px;
 }
 
 .btn-banner .btn2 {
-   
     background: transparent;
     border: 2px solid #0176d3;
     color: #0176d3;
-
 }
-.banner-container{
-   background:url(images/php-marqee-ai-data-crm-lg-bg.webp)no-repeat;
-   width: 100%;
-   background-size: cover;
 
-
+.banner-container {
+    background: url(images/php-marqee-ai-data-crm-lg-bg.webp)no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
 }
-.banner-container .banner{
+
+.banner {
+    width: 1280px;
+    height: 510px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-width: 1280px;
-height: 510px;
-margin: auto;
-padding-top: 64px;
-column-gap: 40px;
-row-gap: 60px;
-
-
+    grid-template-columns: 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px;
+    gap: 40px;
+    margin: auto;
+    padding-top: 64px;
+    /* border: 1px solid blue; */
+    /* padding: 64px 0px 64px 0px; */
+    /* column-gap: 1000px; */
 }
 
-.banner .contents{
-    grid-column-start: 1;
-    grid-column-end: 4;
+.contents-banner {
     width: 620px;
     height: 510px;
+    display: grid;
+    grid-template-rows: 192px 60px 52px;
+    gap: 30px;
 }
 
-.products-section{
+.right-banner {
+    grid-column-start: 8;
+    grid-column-end: 13;
+}
+
+
+/* 
+.btn-banner .btn2 {
+    margin-left: 20px;
+} */
+
+
+/* 
+.products-section {
     width: 100%;
-    height: 2008px;
-    margin-top: 30px;
-    background: url(images/pb-hp-products-bg.webp) no-repeat;
-    /* background-size: cover; */
-    /* background-position: center; */
+    background-image: linear-gradient(180deg, #ffffff, rgb(234, 245, 254) 100%);
+    margin-top: 80px;
 }
-.products-section .products{
+
+.product-items {
+    width: 1280px;
+    height: 427px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 1300px;
-    height: 703px;
-    margin: auto;
-    padding-top: 80px;
-    row-gap: 200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 24px;
+    gap: 40px;
 }
-.products .heading{
-  
-    grid-column-start: 1;
-    grid-column-end: 7;
+
+.products {
+    width: 1280px;
+    height: 778px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto;
+    gap: 40px;
+    padding: 24px 0px 64px;
+}
+
+.mid,
+.demo {
+    width: 290px;
+    padding: 20px;
+}
+
+.product-items ol {
+    list-style: none;
+}
+
+a[target="_blank"] {
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    color: #032D60;
+    text-decoration: none;
+}
+
+.box-p {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #181818;
+    line-height: 1.5;
+}
+
+.demo {
+    margin-top: 70px;
+}
+
+.demo a {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #032D60;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 290px;
+    height: 427px;
+    background-color: white;
+}
+
+.box1 img,
+.box2 img,
+.box3 img,
+.box4 img {
+    border-radius: 10px;
+}
+
+.heading {
     font-size: 40px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #032D60;
     text-align: center;
+} */
+
+
+/* 
+.view-all {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-.product-items{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 1500px;
-    height: 428px;
-    gap: 60px;
-
-}
-.products .product-items .box1{
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-  
-.product-items ol{
-    list-style: none;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-
-
-}
-
-.view-all{
-    grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column-end: 7;
-}
-
-a[ target="_blank"]{
-    font-size: 20px;
+.view-all button {
+    padding: 12px 32px;
+    color: #0176d3;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #032D60;
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-.box-p{
     font-size: 16px;
-    color: #181818;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
-}
-.demo a{
-    font-size: 16px;
-    color: #032D60;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bolder;
-}
-.mid{
-    padding-top: 80px;
-    padding-left: 30px;
-}
-.demo{
-    padding-top: 80px;
-    padding-left: 30px;
-    padding-bottom: 30px;
+    background-color: white;
+    border: 2px solid #0176d3;
+    border-radius: 6px;
+} */
 
+@media only screen and (max-width: 1361px) {
+    .left-nav ol .hide {
+        display: none;
+    }
+    .right-nav .contact {
+        display: none;
+    }
+    .right-nav .login span {
+        display: none;
+    }
+    .left-nav.navicon {
+        display: block;
+    }
+    .left-nav .navicon i {
+        font-size: 30px;
+    }
 }
 
-.view-all button{
-padding: 20px 40px;
-background-color: white;
-color: #0176d3;
-font-size: 20px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-weight: bolder;
-border: 2px solid #0176d3;
+@media only screen and (width < 1280px) {
+    .dreamforce ol {
+        display: block;
+        list-style: none;
+        flex-direction: column;
+        align-items: start;
+    }
+    .banner-container {
+        width: 1280px;
+        height: 955px;
+        background: transparent;
+        background-color: aqua;
+    }
+    .banner {
+        width: 955px;
+        height: 825px;
+        display: grid;
+        grid-template-columns: 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 100px;
+    }
+    .right-banner {
+        grid-row-start: 2;
+        grid-column-start: 3;
+        grid-column-end: 10;
+    }
+    .right-banner img {
+        width: 465px;
+        height: 465px;
+    }
+    .contents-banner {
+        width: 792px;
+        height: 300px;
+        display: grid;
+        grid-template-rows: 112px 60px 51px;
+        gap: 80px;
+        grid-row-start: 1;
+        /* grid-column-start: 2;
+        grid-column-end: 10; */
+    }
+    .content2-banner p {
+        font-size: 20px;
+    }
 }
-.view-all{
-    text-align: center;
+
+@media only screen and (max-width:1027px) {
+    .banner {
+        width: 727px;
+        height: 767px;
+        display: grid;
+        grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 100px;
+    }
 }
